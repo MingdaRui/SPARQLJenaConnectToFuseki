@@ -4,30 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>ARQ Test</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<form action = "SPARQLServlet">
-	Please enter first name: 
-	<input type="text" name="fn"/><br>
-	<input type="submit" value="submit">
-	</form>
-	
-
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
