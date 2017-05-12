@@ -1,4 +1,4 @@
-package yueming.sparql;
+package yueming.sparql.control;
 
 import java.io.IOException;
 
@@ -17,15 +17,15 @@ import org.apache.jena.query.ResultSetFormatter;
 /**
  * Servlet implementation class SPARQLServletTest3
  */
-@WebServlet("/SPARQLServlet")
-public class SPARQLServlet extends HttpServlet {
+@WebServlet("/SPARQLServletTest")
+public class SPARQLServletTest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	String serviceURI = "http://localhost:3030/fuseki/test/query";
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SPARQLServlet() {
+    public SPARQLServletTest() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -47,12 +47,11 @@ public class SPARQLServlet extends HttpServlet {
 						"		?name vcard:Given \"" + firstName + "\" . " + 
 						"		}";
 		
-		System.out.println("Enter SPARQLServlet!");
+		System.out.println("Enter SPARQLServletTest!");
 		
 		QueryExecution q = QueryExecutionFactory.sparqlService(this.serviceURI, queryString);
 		ResultSet results = q.execSelect();
-		System.out.println("In Servlet:\n"
-				+ results.toString());
+
 //		ResultSetFormatter.out(System.out, results);
 		
 		request.setAttribute("results", results);

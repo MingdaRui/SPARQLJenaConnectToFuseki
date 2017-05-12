@@ -7,7 +7,7 @@
 <title>ARQ Test</title>
 </head>
 <body>
-	<form action = "SPARQLServlet">
+	<form action = "SPARQLServletTest" method="post">
 	Please enter first name: 
 	<input type="text" name="fn"/><br>
 	<input type="submit" value="submit">

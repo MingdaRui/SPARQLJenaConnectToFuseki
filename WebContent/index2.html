@@ -1,0 +1,141 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>ARQ Test</title>
+
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+
+<!-- webfonts -->
+<link href='http://fonts.useso.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<!-- Header Starts Here -->
+<div class="banner inner-banner" >
+	<div class="header">
+		<div class="container">
+			<div class="banner-top">
+				<ul class="nav banner-nav"></ul>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+<!-- page heading -->
+	<div id="breadcrumb_wrapper">
+		<div class="container">
+			<h3>Trinity Library Interface Tutorial</h3>
+			<h6>Are you ready?</h6>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"> </div>
+<!-- Header Ends Here -->
+
+<div class="contact">
+	<div class="container">
+		<div class="contact-infom"> <!--
+			<h1>Test H1</h1>
+            <h2>Test H2</h2>
+            <h3>Test H3</h3>
+            <h4>Test H4</h4>
+            <h5>Test H5</h5>
+            <h6>Test H6</h6>
+             <p>Test P </p> -->
+			<br><br>
+			<h3>Welcome! This tutorial is an instruction to measure which prototype would you prefer:</h3>
+			<br>
+			<ul>
+				<li><h5>List all information about the resource and links to the existing pages</h5></li>
+				<li><h5>Redirect to the existing page when typing a html page</h5></li>
+				<li><h5>*. The coding input box is in below :) </h5></li>
+			</ul>
+			<br><br><br>
+			
+			<div class="question">
+				<h4>Question 1:</h4>
+				<h5>Could you please find the author of "Charter Roll of the City of Waterford"?</h5><br>
+				<form action = "SPARQLServletFactory" method="post">
+					<p>Please enter key words for query: 
+					<input type="hidden" name="queryType" value="foaf:title"/>
+					<input type="text" name="queryString"/><br>
+					<input type="submit" value="submit"><p>
+				</form>
+			</div>
+			<br><br>
+			
+			<div class="question">
+				<h4>Question 2:</h4>
+				<h5>Could you please find the availability of the work with state "/2262/6455"?</h5><br>
+				<form action = "SPARQLServlet">
+					<p>Please enter key words for query: 
+					<input type="hidden" queryType="rdf:resource"/>
+					<input type="text" name="queryString"/><br>
+					<input type="submit" value="submit"><p>
+				</form>
+			</div>
+			<br><br>
+			
+			<div class="question">
+				<h4>Question 3:</h4>
+				<h5>Rae Edwin has a lot of famous works, one is "Gowran Church, Gowran, County Kilkenny -- Effigy of a Butler Knight, Tomb Surround". <br><br>
+					Could you please list another example?</h5><br>
+				<form action="SPARQLServletFactory" method="post">
+					<p>Please enter key words for query: 
+					<input type="hidden" name="queryType" value="foaf:author"/>
+					<input type="text" name="queryString"/><br>
+					<input type="submit" value="submit"><p>
+				</form>
+			</div>
+			<br><br>
+			
+			<div class="question">
+				<h4>Question 4:</h4>
+				<h5>Could you please find PIN number of the work "A Quarrel about the Breeches"?</h5><br>
+				<form action = "SPARQLServlet">
+					<p>Please enter key words for query: 
+					<input type="text" title="foaf:title"/><br>
+					<input type="submit" value="submit"><p>
+				</form>
+			</div>
+			<br><br>
+			
+			<div class="question">
+				<h4>Question 5:</h4>
+				<h5>Could you please list works whose collection title is "World War 1 Recruiting Posters"?</h5><br>
+				<form action = "SPARQLServlet">
+					<p>Please enter key words for query: 
+					<input type="text" title="foaf:collectionTitle"/><br>
+					<input type="submit" value="submit"><p>
+				</form>
+			</div>
+			<br><br>
+			<http://www.tara.tcd.ie/handle/2262/25555>
+			<div class="question">
+				<h4>Question 6:</h4>
+				<h5>The digital number of "John Bull learning a New Movement against the next Campaign" is OLS-CARI-ROB_0340. <br><br>
+					Could you please find another work having the same digital number?</h5><br>
+				<form action = "SPARQLServlet">
+					<p>Please enter key words for query: 
+					<input type="text" title="foaf:digitalNo"/><br>
+					<input type="submit" value="submit"><p>
+				</form>
+			</div>
+			<br><br>
+			
+			
+			
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
